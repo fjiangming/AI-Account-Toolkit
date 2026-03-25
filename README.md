@@ -288,6 +288,17 @@ AI-Account-Toolkit/
 
 **使用指南**：[packages/email/outlook-auto-register/README.md](packages/email/outlook-auto-register/README.md)
 
+### 23. cursor-auto-register - 光标设置管理工具
+
+**功能**：轻松管理你的光标设置，包括调整光标大小、更改光标颜色、创建配置文件和备份恢复设置等。
+
+**主要文件**：
+- 主程序文件
+- 配置文件
+- README.md - 项目说明
+
+**使用指南**：[packages/general/cursor-auto-register/README.md](packages/general/cursor-auto-register/README.md)
+
 ## 快速开始
 
 ### 1. 环境准备
@@ -332,6 +343,7 @@ git submodule update
 - `packages/email/msOauth2api/` - 微软 OAuth2 邮件取件 API
 - `packages/email/Hotmail-Outlook-Create-Account-Register-Auto/` - Hotmail 账号自动创建工具
 - `packages/email/outlook-auto-register/` - Outlook 邮箱注册工具集
+- `packages/general/cursor-auto-register/` - 光标设置管理工具
 
 ### 3. 配置设置
 

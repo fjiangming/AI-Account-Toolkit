@@ -65,6 +65,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - 提供可持久化、可排队、可下载结果的任务系统
     - 支持通过 API 调用任务接口
     - 内置 chatgpt_register_v2 和 grok-register 脚本
+  - **packages/general/cursor-auto-register** (submodule) - 光标设置管理工具
+    - 轻松管理光标设置，包括大小和颜色调整
+    - 创建和管理光标配置文件
+    - 备份和恢复光标设置
+    - 适用于 Windows 和 macOS 系统
 
 - **Codex 相关子模块**
   - **packages/codex/codex-lb** (submodule) - Codex 负载均衡工具
