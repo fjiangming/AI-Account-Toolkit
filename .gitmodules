@@ -58,3 +58,6 @@
 [submodule "packages/general/real-random-taxfree-address"]
 	path = packages/general/real-random-taxfree-address
 	url = https://github.com/hotbob011/real-random-taxfree-address.git
+[submodule "packages/grok/grok2api"]
+	path = packages/grok/grok2api
+	url = https://github.com/satangel2222/grok2api.git

@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.2.0] - 2026-04-01
+
+### Added
+- grok2api 子模块 (`packages/grok/grok2api`) - Grok API 转换服务
+
 ## [2.1.0] - 2026-03-27
 
 ### Added

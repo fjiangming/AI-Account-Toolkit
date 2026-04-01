@@ -68,7 +68,8 @@ AI-Account-Toolkit/
     ├── cursor/              # Cursor 相关子模块
     │   └── cursor-auto-register/ # Cursor 自动注册工具
     ├── grok/                # Grok 相关子模块
-    │   └── grok-register/   # x.ai 注册批处理工具
+    │   ├── grok-register/   # x.ai 注册批处理工具
+    │   └── grok2api/        # Grok API 转换服务
     ├── email/               # 邮箱相关子模块
     │   ├── cloudflare-temp-email/ # Cloudflare 临时邮箱服务
     │   ├── tempmail/        # 自托管临时邮箱服务
@@ -252,17 +253,23 @@ AI-Account-Toolkit/
 
 **使用指南**：[packages/grok/grok-register/README.md](packages/grok/grok-register/README.md)
 
+#### 23. grok2api - Grok API 转换服务
+
+**功能**：将 Grok 服务的接口转换为标准 API 格式，支持多账号管理和 Token 池化。
+
+**使用指南**：[packages/grok/grok2api/README.md](packages/grok/grok2api/README.md)
+
 ---
 
 ### 邮箱服务 (packages/email)
 
-#### 23. cloudflare-temp-email - Cloudflare 临时邮箱服务
+#### 24. cloudflare-temp-email - Cloudflare 临时邮箱服务
 
 **功能**：基于 Cloudflare 免费服务构建的临时邮箱服务，支持邮件收发、附件处理等功能。
 
 **使用指南**：[packages/email/cloudflare-temp-email/README.md](packages/email/cloudflare-temp-email/README.md)
 
-#### 24. tempmail - 自托管临时邮箱服务
+#### 25. tempmail - 自托管临时邮箱服务
 
 **功能**：自托管临时邮件服务平台，支持多域名池、用户自助提交域名、MX 自动验证与自动禁用、API Key 鉴权及 Web 管理后台。基于 Docker 部署，包含 PostgreSQL、PgBouncer、Redis、Postfix 等完整组件。
 
@@ -270,19 +277,19 @@ AI-Account-Toolkit/
 
 **使用指南**：[packages/email/tempmail/README.md](packages/email/tempmail/README.md)
 
-#### 25. ms-oauth2-api - 微软 OAuth2 邮件取件 API
+#### 26. ms-oauth2-api - 微软 OAuth2 邮件取件 API
 
 **功能**：将微软 OAuth2 认证取件流程封装成一个简单的 API，部署在 Vercel 无服务器平台上。
 
 **使用指南**：[packages/email/ms-oauth2-api/README.md](packages/email/ms-oauth2-api/README.md)
 
-#### 26. hotmail-outlook-auto-register - Hotmail/Outlook 自动注册
+#### 27. hotmail-outlook-auto-register - Hotmail/Outlook 自动注册
 
 **功能**：高级 Hotmail / Outlook 账号创建和自动化工具，支持验证码绕过、代理轮换、指纹伪装和逼真的人类行为模拟。
 
 **使用指南**：[packages/email/hotmail-outlook-auto-register/README.md](packages/email/hotmail-outlook-auto-register/README.md)
 
-#### 27. outlook-auto-register - Outlook 邮箱注册工具集
+#### 28. outlook-auto-register - Outlook 邮箱注册工具集
 
 **功能**：基于 Outlook 邮箱 OAuth2 认证的批量自动注册工具集，支持多个目标平台共享同一套邮箱接码模块。
 
@@ -292,7 +299,7 @@ AI-Account-Toolkit/
 
 ### 通用工具 (packages/general)
 
-#### 28. any-auto-register - 多平台账号自动注册工具
+#### 29. any-auto-register - 多平台账号自动注册工具
 
 **功能**：多平台账号自动注册工具，支持 ChatGPT、Cursor、Kiro 等多个平台。
 
@@ -300,13 +307,13 @@ AI-Account-Toolkit/
 
 **使用指南**：[packages/general/any-auto-register/README.md](packages/general/any-auto-register/README.md)
 
-#### 29. api-key-scraper - 多平台 API 密钥抓取工具
+#### 30. api-key-scraper - 多平台 API 密钥抓取工具
 
 **功能**：多平台 API 密钥抓取工具，支持从多个来源自动化获取 OpenAI、Gemini、Claude 的 API 密钥。
 
 **使用指南**：[packages/general/api-key-scraper/README.md](packages/general/api-key-scraper/README.md)
 
-#### 30. mregister - ChatGPT 注册机 Web UI
+#### 31. mregister - ChatGPT 注册机 Web UI
 
 **功能**：基于 FastAPI 的控制台，用来统一管理 chatgpt_register_v2 和 grok-register 两个注册脚本。它把原本偏命令行的执行方式包装成可持久化、可排队、可下载结果、可通过 API 调用的任务系统。
 
@@ -314,11 +321,17 @@ AI-Account-Toolkit/
 
 **使用指南**：[packages/general/mregister/README.md](packages/general/mregister/README.md)
 
-#### 31. exa-free - Exa 免费使用工具
+#### 32. exa-free - Exa 免费使用工具
 
 **功能**：Exa 免费使用工具，提供 Exa 相关服务的免费访问。
 
 **使用指南**：[packages/general/exa-free/README.md](packages/general/exa-free/README.md)
+
+#### 33. real-random-taxfree-address - 真实随机免税地址生成
+
+**功能**：生成真实的美国随机免税地址，用于账号注册等场景。
+
+**使用指南**：[packages/general/real-random-taxfree-address/README.md](packages/general/real-random-taxfree-address/README.md)
 
 ---
 
@@ -361,6 +374,7 @@ find . -name "requirements.txt" -not -path "*/node_modules/*" -exec pip install 
 | | `packages/codex/codex-register-fix/` | Codex 注册修复版本 |
 | **Cursor** | `packages/cursor/cursor-auto-register/` | Cursor 自动注册工具 |
 | **Grok** | `packages/grok/grok-register/` | x.ai 注册批处理 |
+| | `packages/grok/grok2api/` | Grok API 转换服务 |
 | **Email** | `packages/email/cloudflare-temp-email/` | Cloudflare 临时邮箱服务 |
 | | `packages/email/tempmail/` | 自托管临时邮箱服务 |
 | | `packages/email/ms-oauth2-api/` | 微软 OAuth2 邮件取件 API |
@@ -370,6 +384,7 @@ find . -name "requirements.txt" -not -path "*/node_modules/*" -exec pip install 
 | | `packages/general/api-key-scraper/` | 多平台 API 密钥抓取 |
 | | `packages/general/mregister/` | ChatGPT 注册机 Web UI |
 | | `packages/general/exa-free/` | Exa 免费使用工具 |
+| | `packages/general/real-random-taxfree-address/` | 真实随机免税地址生成 |
 
 ### 4. 运行项目
 
@@ -430,4 +445,4 @@ python packages/general/any-auto-register/main.py
 
 ---
 
-**License**: [MIT](LICENSE) | **更新日期**：2026-03-27 | **版本**：2.2.0
+**License**: [MIT](LICENSE) | **更新日期**：2026-04-01 | **版本**：2.2.0
